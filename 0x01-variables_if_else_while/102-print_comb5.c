@@ -30,7 +30,7 @@ while (d < 10)
 					putchar('0' + c);
 					putchar(' ');
 					putchar('0' + b);
-					putchar('0' + c);
+					putchar('0' + a);
 					if (!(d + c == 18 && a + b == 17 && b == 9))
 					{
 						putchar(',');

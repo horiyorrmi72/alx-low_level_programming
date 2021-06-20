@@ -18,6 +18,7 @@
  */
 int main(void)
 {
+  
   int tens;
   int ones;
   int t;

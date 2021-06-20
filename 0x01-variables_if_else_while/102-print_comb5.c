@@ -26,7 +26,7 @@ while (d < 10)
 			{
 				if (!(d == a && c == b))
 				{
-					putchar('0' + f);
+					putchar('0' + d);
 					putchar('0' + c);
 					putchar(' ');
 					putchar('0' + b);

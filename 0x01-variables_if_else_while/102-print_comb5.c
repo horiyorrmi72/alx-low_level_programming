@@ -4,52 +4,47 @@
  * main - main block
  * Description: Write a program that prints all possible
  * different combinations of two digits
- * Numbers must be separated by ,, followed by a space
- * The two digits must be different
- * 01 and 10 are considered the same combination of the two digits 0 and 1
- * Print only the smallest combination of two digits
- * Numbers should be printed in ascending order, with two digits
- * You can only use the putchar function
- * (every other function (printf, puts, etc…) is forbidden)
- * You can only use putchar five times maximum in your code
- * You are not allowed to use any variable of type char
- * All your code should be in the main function
  * Return: 0
  */
 int main(void)
 {
-  
-  int tens;
-  int ones;
-  int t;
-  int o;
+int c;
+int d;
+int e;
+int f = 0;
 
-	for (tens = '0'; tens <= '9'; tens++)
+while (f < 10)
+{
+	e = 0;
+	while (e < 10)
 	{
-		for (ones = '0'; ones <= '9'; ones++)
+		d = 0;
+		while (d < 10)
 		{
-		    for (t = tens; t <= '9'; t++)
+			c = 0;
+			while (c < 10)
 			{
-				for (o = ones + 1; o <= '9'; o++)
+				if (!(f == c && e == d))
 				{
-					putchar(tens);
-					putchar(ones);
+					putchar('0' + f);
+					putchar('0' + e);
 					putchar(' ');
-					putchar(t);
-					putchar(o);
-
-					if (!((tens == '9' && ones == '8') &&
-					      (t == '9' && o == '9')))
+					putchar('0' + d);
+					putchar('0' + c);
+					if (!(f + e == 18 && c + d == 17 && d == 9))
 					{
 						putchar(',');
 						putchar(' ');
 					}
 				}
-				o = '0';
+				c++;
 			}
+			d++;
 		}
+		e++;
 	}
-	putchar('\n');
-
-	return (0);
+	f++;
+}
+putchar('\n');
+return (0);
 }

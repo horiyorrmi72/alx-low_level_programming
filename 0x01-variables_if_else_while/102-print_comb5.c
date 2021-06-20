@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <std.h>
 /**
  * main - main block
  * Description: Write a program that prints all possible
@@ -8,43 +7,37 @@
  */
 int main(void)
 {
-int c;
-int d;
-int e;
-int f = 0;
+	int tens;
+	int ones;
+	int t;
+	int o;
 
-while (f < 10)
-{
-	e = 0;
-	while (e < 10)
+	for (tens = '0'; tens <= '9'; tens++)
 	{
-		d = 0;
-		while (d < 10)
+		for (ones = '0'; ones <= '9'; ones++)
 		{
-			c = 0;
-			while (c < 10)
-			{
-				if (!(f == c && e == d))
+		 	for (t = tens; t <= '9'; t++)
+			  {
+				for (o = ones + 1; o <= '9'; o++)
 				{
-					putchar('0' + f);
-					putchar('0' + e);
+					putchar(tens);
+					putchar(ones);
 					putchar(' ');
-					putchar('0' + d);
-					putchar('0' + c);
-					if (!(f + e == 18 && c + d == 17 && d == 9))
+					putchar(t);
+					putchar(o);
+
+					if (!((tens == '9' && ones == '8') &&
+					      (t == '9' && o == '9')))
 					{
 						putchar(',');
 						putchar(' ');
 					}
 				}
-				c++;
+				o = '0';
 			}
-			d++;
 		}
-		e++;
 	}
-	f++;
-}
-putchar('\n');
-return (0);
+	putchar('\n');
+
+	return (0);
 }

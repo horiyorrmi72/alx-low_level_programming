@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  *_memset - fill a block of memory with a specific value
  *@s: starting address of memory to be filled

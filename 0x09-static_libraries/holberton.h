@@ -1,3 +1,6 @@
+#ifndef HEADER_FILE
+#define HEADER_FILE
+
 0-isupper.o
 0-memset.o
 0-strcat.o
@@ -18,3 +21,5 @@
 6-abs.o
 9-strcpy.o
 _putchar.o
+
+#endid
